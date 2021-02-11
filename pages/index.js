@@ -1,10 +1,17 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
+import AppLayouts from '../src/components/AppLayouts';
+import Footer from '../src/components/Footer'
+import Nav from '../src/components/Nav'
+
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
+      <Nav/>
+      <AppLayouts/>
+      <Footer/>
+      {/* <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -59,7 +66,7 @@ export default function Home() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
-      </footer>
+      </footer> */}
     </div>
   )
 }
