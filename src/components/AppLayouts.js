@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 
 import { Col, Row, Layout, Menu, Breadcrumb, List, Card} from 'antd'
+import {Flex, WhiteSpace} from 'antd-mobile';
+
 import {css} from '@emotion/react';
 import Banner from './Banner';
 import Footer from './Footer';
@@ -9,6 +11,8 @@ import axios from 'axios';
 import LoadingIndicator from './LoadingIndicator';
 const {Header, Content} = Layout;
 import InfinteScroll from 'react-infinite-scroll-component';
+import Nav from './Nav';
+
 export default function AppLayouts() { 
 
   const [images, setImages] = useState([]);
@@ -38,7 +42,7 @@ export default function AppLayouts() {
 
   return (
     <>
-  
+    <Nav/>
     <Banner/>
     <div>
     <InfinteScroll
